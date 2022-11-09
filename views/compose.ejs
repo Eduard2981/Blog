@@ -1,0 +1,30 @@
+<%- include("partials/header") -%>
+
+
+<form action="/compose" method="post">
+    <div class="composeContainer">
+<h1 class="composeH1" >Adaugă un articol nou</h1>
+ 
+    <p class="ms-2 d-flex flex-content-start lead">Titlu</p>
+  <input name="titleTxt" required class="d-flex flex-content-start form-control bg-dark mb-2 text-white" type="text" placeholder="Un fost antrenor al lui Real Madrid a preluat o echipă din Premier League" >
+ 
+  <p class="ms-2 d-flex flex-content-start lead">Imagine</p>
+  <input name="urlTxt" required class="form-control bg-dark text-white mb-2" type="text" placeholder="https://media.cnn.com/api/v1/images/stellar/prod/220828051802-02-liverpool-bournemouth-premier-league-record.jpg?c=original">
+ 
+  <p class="ms-2 d-flex flex-content-start lead">Descriere</p>
+<textarea name="descriptionTxt" required class="form-control bg-dark text-white mb-2" name="descriptionTxt"  placeholder="Erik ten Hag (52 de ani) a luat o decizie surprinzătoare la meciul lui Manchester United cu Aston Villa, din cadrul etapei cu numărul 15 din Premier League." id="floatingTextarea2" style="height: 100px"></textarea>
+
+  <p class=" ms-2 d-flex flex-content-start lead">Paragraf</p>
+  <textarea name="paragraphTxt" required class="paragraphTxt form-control bg-dark text-white" placeholder="Cristiano Ronaldo este pentru mulți cel mai bun fotbalist din istorie, iar performanțele portughezului vorbesc de la sine. Câștigător de 5 ori al Balonului de Aur, acesta s-a aflat în top 3 de fiecare dată în ultimii 11 ani, până la gala din 2021." id="floatingTextarea2" style="height: 100px"></textarea>
+
+
+<button type="submit" class="btn btn-primary btn-lg mt-3 mb-5 w-4">Publica</button>
+</div>
+  
+</form>
+
+
+
+
+
+<%- include("partials/footer") -%>

@@ -1,0 +1,12 @@
+const title =
+  "Liverpool a câștigat Champions League, după 2-0 cu Tottenham. Klopp a spart gheața, după două finale pierdute.";
+const imgUrl =
+  "https://s.iw.ro/gateway/g/ZmlsZVNvdXJjZT1odHRwJTNBJTJGJTJG/c3RvcmFnZTAxdHJhbnNjb2Rlci5yY3Mt/cmRzLnJvJTJGc3RvcmFnZSUyRjIwMTkl/MkYwNiUyRjAyJTJGMTA4MDc3M18xMDgw/NzczX2p1cmdlbi1rbG9wcC5qcGcmdz0x/MDYwJmg9NjM2Jmhhc2g9OGUzMzk0YzQ3NTY4OTIzNTM1Y2Q1ZWEwNzc4M2U5ZTE=.thumb.jpg";
+const description =
+  "Liverpool a cucerit pentru a şasea oară trofeul UEFA Champions League, după ce a învins Tottenham în ultimul act al competiţiei. Duelul de pe Wanda Metropolitano a debutat cu cel mai rapid penalty din istoria finalelor competiţiei, dictat în secunda 23 şi confirmat de arbitrajul video. Egipteanul Salah l-a transformat, la prima atingere de balon.";
+const pEls = [
+  'Aş fi nebun să cred că vreo echipă are prima şansă. Ştiu că mulţi spun că Liverpool este favorită, dovadă diferenţa din campionat. Dar cine a văzut meciurile directe cu Tottenham din acest sezon ştie că nu e aşa, chiar dacă le-am câştigat pe amândouă", a declarat Klopp.',
+  '"Nu cred că Tottenham porneşte cu şansa a doua. Meciurile de campionat au fost extrem de dificile, probabil cel mai puternic adversar cu care am jucat," a spus şi Andy Robertson.',
+  '"Este a treia finală la rând pentru Liverpool, jos pălăria! Asta este cel mai dificil lucru! Noi vom juca la fel ca până acum, ei sunt favoriţi" a fost reacţia lui Pochettino înainte de meci.',
+  'Traseul nu a fost unul simplu pentru niciuna dintre finaliste - Liverpool a reuşit mai întâi o victorie dramatică în faţa lui Napoli pentru a ieşi din grupe. Apoi a reuşit unul din cele mai spectaculoase comeback-uri din istorie - după 0-3 pe Camp Nou, au învins Barcelona cu 4-0 pe Anfield. '
+];

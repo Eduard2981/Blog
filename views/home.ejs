@@ -1,0 +1,31 @@
+<%- include ('partials/header') -%>
+
+
+<div class="cover-container d-flex p-3 mx-auto flex-column">
+
+  <main class="px-3">
+    
+  <h3 class="t-10"><%= title %></h3>
+    <img src="<%= imgUrl%>" class="img-fluid mt-5 mb-2" alt="Responsive image">
+    
+    <div class="d-flex flex-content-start ms-4"><p class="blogDate"> <%= blogDate%></p></div>
+    <p class="lead"><%= description%></p>
+    <p class="lead">
+      <a id="displayBtn" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Citeste tot articolul</a>
+    </p>
+<div class="allText">    <!--display none -->
+ 
+     <p class="lead"> <%=paragraph%> </p>
+
+</div>
+  </main>
+</div>
+
+<% for(var i=0; i<posts.length; i++){   %>
+<% console.log(posts[i].title)          %>
+<% }                                    %>
+
+
+
+
+  <%- include ('partials/footer') -%>
