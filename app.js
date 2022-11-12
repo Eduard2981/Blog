@@ -23,7 +23,7 @@ const articleData = {
 };
 
 let num = 0;
-let posts = [num]; 
+let posts = [articleData]; 
 
 
   app.get("/", function(req,res){
