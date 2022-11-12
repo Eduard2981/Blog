@@ -74,6 +74,34 @@ app.listen(port, function(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // // Open Weather API
 
   // let cityName = req.body.city;
