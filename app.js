@@ -49,22 +49,22 @@ const post={
  paragraph :req.body.paragraphTxt,
  blogDate : date.articleDate()
 }
-num++
- posts.push(post)
 
+ posts.push(post)
+num++
  res.redirect("/")
 })
 
 
 app.get("/contact", function(req,res){
-
   res.render("contact", {
-  
   });
 })
 
 app.get("/about", function(req, res){
-  res.render("about")
+  res.render("about", {
+    "posts": posts
+  })
 })
 
 app.listen(port, function(){
