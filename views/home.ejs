@@ -21,9 +21,10 @@
   </main>
 </div>
 
-<% for(var i=0; i<posts.length; i++){   %>
-<% console.log(posts[i].title)          %>
-<% }                                    %>
+<% posts.forEach(function (item) { %>
+ <%  console.log(item.title)                %>        
+<%   });    %>                
+                               
 
 
 
