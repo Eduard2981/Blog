@@ -106,8 +106,15 @@ color: #8a3ab9;
 
 /* Show it is fixed to the top */
 body {
-  min-height: 75rem;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   padding-top: 4.5rem;
+}
+
+footer{
+ margin-top: auto;
 }
 
      .bd-placeholder-img {
@@ -202,12 +209,9 @@ margin-top: 11px;
 font-size: 1.1rem;
 }
 
-.footer{
-  	position: relative;
-	text-align: center;
-	bottom: 0;
 
-}
+
+
 
 .composeContainer{
 margin: 50px 50px 100px 50px;

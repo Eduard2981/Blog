@@ -3,6 +3,8 @@ const bodyParser=require("body-parser");
 const ejs=require("ejs")
 const https=require("https")
 const date=require("./date.js")
+var _ = require("lodash");
+const { kebabCase } = require("lodash");
 const app=express()
 const port= 3000;
 app.set("view engine", "ejs")
@@ -27,7 +29,7 @@ let posts = [articleData];
 
 
   app.get("/", function(req,res){
-
+ 
     res.render("home", {
     "title": posts[num].title, 
     "imgUrl": posts[num].imgUrl, 
@@ -52,7 +54,7 @@ const post={
 
  posts.push(post)
 num++
- res.redirect("/")
+ res.redirect("/posts")
 })
 
 
@@ -61,11 +63,31 @@ app.get("/contact", function(req,res){
   });
 })
 
-app.get("/about", function(req, res){
-  res.render("about", {
+app.get("/posts", function(req, res){
+  res.render("posts", {
     "posts": posts
   })
 })
+
+app.get("/posts/:postName", function (req, res) {
+const titleSent = _.kebabCase(req.params.postName); 
+  posts.forEach(function(item){
+
+      if (titleSent == _.kebabCase(item.title)) {
+            res.render("home", {
+              title: posts[num].title,
+              imgUrl: posts[num].imgUrl,
+              description: posts[num].description,
+              paragraph: posts[num].paragraph,
+              blogDate: posts[num].blogDate,
+              posts: posts,
+            });
+        console.log("Match found!");
+      }
+  })
+ 
+ 
+});
 
 app.listen(port, function(){
     console.log("Server started on port "+port+".")
