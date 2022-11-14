@@ -4,14 +4,16 @@ const ejs=require("ejs")
 const https=require("https")
 const date=require("./date.js")
 var _ = require("lodash");
-const { kebabCase } = require("lodash");
 const app=express()
 const port= 3000;
 app.set("view engine", "ejs")
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extended: true}))
 
-
+  // Open Weather API
+  
+  let location = ['Liverpool']
+  let num3 = 0
 
 const articleData = {
   title: "Your title",
@@ -24,23 +26,35 @@ const articleData = {
   blogDate: "12.34.5678, 12:34:56",
 };
 
+// Num ---- articleData
+// Num2 ---- weatherlocs
+// Num3 ---- location
+
+
 let num = 0;
+
+let weatherlocs = [{}];
 let posts = [articleData]; 
+let topics=['posts',undefined,'compose','contact']
+let num2 = 0
 
 
   app.get("/", function(req,res){
- 
-    res.render("home", {
-    "title": posts[num].title, 
-    "imgUrl": posts[num].imgUrl, 
-    "description":posts[num].description,
-    "paragraph": posts[num].paragraph,
-    "blogDate":posts[num].blogDate,
-    "posts":posts})
+ res.redirect("/posts")
+
   });
 
+
+
+
 app.get("/compose", function(req, res){
-res.render("compose")
+
+res.render("compose", {
+  cityName: weatherlocs[num2].locName,
+          temp: weatherlocs[num2].temp,
+          wheaterImg: weatherlocs[num2].iconUrl,
+          wheaterDesc: weatherlocs[num2].weatherDesc
+})
 })
 
 app.post("/compose", function(req, res){
@@ -60,20 +74,98 @@ num++
 
 app.get("/contact", function(req,res){
   res.render("contact", {
+    cityName: weatherlocs[num2].locName,
+    temp: weatherlocs[num2].temp,
+    wheaterImg: weatherlocs[num2].iconUrl,
+    wheaterDesc: weatherlocs[num2].weatherDesc,
   });
 })
-
-app.get("/posts", function(req, res){
-  res.render("posts", {
-    "posts": posts
-  })
+app.post("/contact", function(req,res){
+  res.redirect("/contact")
 })
+
+  app.get("/posts", function (req, res) {
+    res.render("posts", {
+      posts: posts,
+      title: posts[num].title,
+      imgUrl: posts[num].imgUrl,
+      description: posts[num].description,
+      paragraph: posts[num].paragraph,
+      blogDate: posts[num].blogDate,
+      posts: posts,
+      cityName: weatherlocs[num2].locName,
+      temp: weatherlocs[num2].temp,
+      wheaterImg: weatherlocs[num2].iconUrl,
+      wheaterDesc: weatherlocs[num2].weatherDesc,
+    });
+    console.log(num2);
+    console.log(num3);
+    console.log(location);
+    console.log(weatherlocs);
+  });
+
+app.post("/posts", function(req, res){
+  // Weather get
+ locationA=req.body.city;
+
+  const appid = "b13895394aabe82ee9fe9c8764b1f669";
+  const lang = "ro";
+  const units = "metric";
+  const apiURL =
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
+    locationA +
+    "&appid=" +
+    appid +
+    "&lang=" +
+    lang +
+    "&units=" +
+    units;
+
+  https.get(apiURL, (response) => {
+    console.log("Weather status code: " + response.statusCode);
+      
+    if (response.statusCode !== 200) {
+  
+
+      res.redirect("/failure");
+    } else {
+  
+      response.on("data", (data) => {
+        const weatherData = JSON.parse(data);
+        const temp = weatherData.main.temp;
+        const weatherDesc = weatherData.weather[0].description;
+        const iconCode = weatherData.weather[0].icon;
+        const iconUrl =
+          "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+        const locName = weatherData.name;
+ 
+        const weatherLoc = {
+          iconUrl,
+          temp,
+          weatherDesc,
+          locName,
+        };
+        weatherlocs.push(weatherLoc)
+        num2++
+      });
+    res.redirect("/posts")
+    }
+    
+  });
+
+  // end
+
+})
+
+  
+
 
 app.get("/posts/:postName", function (req, res) {
 const titleSent = _.kebabCase(req.params.postName); 
+const itemTitle = _.kebabCase(item.title)
   posts.forEach(function(item){
 
-      if (titleSent == _.kebabCase(item.title)) {
+      if (titleSent === itemTitle) {
             res.render("home", {
               title: posts[num].title,
               imgUrl: posts[num].imgUrl,
@@ -81,13 +173,19 @@ const titleSent = _.kebabCase(req.params.postName);
               paragraph: posts[num].paragraph,
               blogDate: posts[num].blogDate,
               posts: posts,
+              cityName: weatherlocs[num2].locName,
+              temp: weatherlocs[num2].temp,
+              wheaterImg: weatherlocs[num2].iconUrl,
+              wheaterDesc: weatherlocs[num2].weatherDesc,
             });
         console.log("Match found!");
       }
   })
- 
- 
 });
+
+app.get("/failure", function(req,res){
+  res.render("failure")
+})
 
 app.listen(port, function(){
     console.log("Server started on port "+port+".")
@@ -124,43 +222,7 @@ app.listen(port, function(){
 
 
 
-  // // Open Weather API
-
-  // let cityName = req.body.city;
-  // const appid = "b13895394aabe82ee9fe9c8764b1f669";
-  // const lang = "ro";
-  // const units = "metric";
-  // const apiURL =
-  //   "https://api.openweathermap.org/data/2.5/weather?q=" +
-  //   cityName +
-  //   "&appid=" +
-  //   appid +
-  //   "&lang=" +
-  //   lang +
-  //   "&units=" +
-  //   units;
 
 
-  // //  Get weather inside app.get{....}
-  // https.get(apiURL, (response) => {
-  //   console.log("Weather status code: " + response.statusCode);
 
-  //   response.on("data", (data) => {
-  //     const watherData = JSON.parse(data);
-  //     const temp = watherData.main.temp;
-  //     const weatherDesc = watherData.weather[0].description;
-  //     const iconCode = watherData.weather[0].icon;
-  //     const iconUrl =
-  //       "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
-
-
-  //     res.render("compose", {
-  //       // weather
-  //       "weatherIcon": iconUrl,
-  //       "temp": temp,
-  //       "wheaterDesc": weatherDesc,
-  //       "cityName": cityName,
-  //     });
-  //   });
-  // });
-  // // End get weather
+ 

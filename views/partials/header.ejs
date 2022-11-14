@@ -46,13 +46,13 @@
           <a class="nav-link active" href="/contact">Contact</a>
         </li>
       </ul>
-      <!-- <div class="d-flex me-2 align-items-center">
-<p class="cityName lead"> ,</p>        
-<p class="temp"> &#8451 </p>          
-<img class="wheaterImg" src="">
-<p class="weatherDesc"></p>
-      </div> -->
-      <form id="myForm" class="d-flex" action="/" method="post">
+      <div class="d-flex me-2 align-items-center">
+<p class="cityName lead"> <%= cityName%> ,</p>        
+<p class="temp"><%= temp%> &#8451 </p>          
+<img class="wheaterImg" src="<%= wheaterImg%>">
+<p class="weatherDesc"><%= wheaterDesc%></p>
+      </div>
+      <form id="myForm" class="d-flex" action="/posts" method="post">
         <input name="city" class="form-control me-2" type="text" placeholder="Orasul tau" aria-label="Search">
         <button class=" btn btn-outline-success" type="submit">Vremea</button>
       </form>
