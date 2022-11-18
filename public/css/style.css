@@ -3,6 +3,9 @@
   min-height: 100%;
 }
        
+p{
+  margin-bottom: 0px;
+}
        .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -106,9 +109,21 @@ color: #8a3ab9;
 
 /* Show it is fixed to the top */
 body {
-  min-height: 75rem;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   padding-top: 4.5rem;
+  background-color: rgb(22, 26, 48);
 }
+
+footer{
+ margin-top: auto;
+ background-color: rgb(22, 26, 48);
+
+}
+
+
 
      .bd-placeholder-img {
         font-size: 1.125rem;
@@ -202,12 +217,9 @@ margin-top: 11px;
 font-size: 1.1rem;
 }
 
-.footer{
-  	position: relative;
-	text-align: center;
-	bottom: 0;
 
-}
+
+
 
 .composeContainer{
 margin: 50px 50px 100px 50px;
@@ -224,4 +236,50 @@ margin: 50px 50px 100px 50px;
 }
 
 
-/* About page  */
+/* Posts List  /////////////*/
+
+
+.titleHref{
+  text-decoration: none;
+}
+
+
+
+ .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+  
+.album{
+  background-color: rgb(22, 26, 48);
+}
+
+.small{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: rgb(243, 229, 229);
+font-size: 0.7rem;
+}
+.card-body{
+  background-color: rgb(34, 43, 69);
+  border: none;
+}
+  .card-body:hover{
+  background-color: rgb(28, 36, 61);
+}
+
+.card{
+  border: none;
+}
+
+.card-text{
+  font-size: 1rem;
+}
