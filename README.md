@@ -9,7 +9,7 @@
 |     3| http://localhost:3000/posts    |main page        |
 
 <picture>
- <source media="(prefers-color-scheme: dark)" srcset="https://www.awesomescreenshot.com/image/34544443?key=e285e75d0a441189b0aaf05531c80632">
- <source media="(prefers-color-scheme: light)" srcset="https://www.awesomescreenshot.com/image/34544443?key=e285e75d0a441189b0aaf05531c80632">
- <img alt="YOUR-ALT-TEXT" src="https://www.awesomescreenshot.com/image/34544443?key=e285e75d0a441189b0aaf05531c80632">
+ <source media="(prefers-color-scheme: dark)" srcset="https://i.ibb.co/xGcNhQK/I-Football-3.png">
+ <source media="(prefers-color-scheme: light)" srcset="https://i.ibb.co/xGcNhQK/I-Football-3.png">
+ <img alt="YOUR-ALT-TEXT" src="https://i.ibb.co/xGcNhQK/I-Football-3.png">
 </picture>
