@@ -8,7 +8,7 @@
 |     2| http://localhost:3000/compose  |for write article|
 |     3| http://localhost:3000/posts    |main page        |
 
-- [x] design responsive :tada:
+ :white_check_mark: design responsive :tada:
 
 ## Home page
 <picture>
