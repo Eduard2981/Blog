@@ -29,7 +29,7 @@ If you're checking out the code from Github, make sure you've installed
 - [x]  Dark theme. 🌘
 
 ## Ongoing Features
-- [ ]:clock8:  NoSQL Database Implementation :electric_plug:
+- [ ] :clock8:  NoSQL Database Implementation :electric_plug:
 
 ## Home page
 <picture>
