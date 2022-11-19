@@ -1,5 +1,5 @@
 
-# Blog about football.
+# ⚽Blog about football.
 
 ## 🚀 Installation
 
@@ -22,7 +22,14 @@ If you're checking out the code from Github, make sure you've installed
 
 - [x]  Design responsive :tada:
 - [x]  National and local weather :sun_behind_large_cloud:
+- [x]  Mobile friendly :heavy_check_mark:
+- [x]  Insert picture in the article :framed_picture:	
+- [x]  Simply user interface 🙌
+- [x]  No tracking, no ads, always free. 📡🚫
+- [x]  Dark theme. 🌘
 
+## Ongoing Features
+- [ ]:clock8:  NoSQL Database Implementation :electric_plug:
 
 ## Home page
 <picture>
