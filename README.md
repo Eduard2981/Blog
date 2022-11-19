@@ -1,9 +1,16 @@
 
 # Blog about football.
-## 🚀 Quick start:
-1. 
-2.
-3.
+
+## 🚀 Installation
+
+If you're checking out the code from Github, make sure you've installed
+[git-lfs](https://git-scm.com/downloads) first. Then, clone normally.
+
+    1. git clone https://github.com/Eduard2981/Blog.git
+    2. cd blog
+    3. npm install
+    4. code .
+    5. nodemon app.js
 
 | Rank | Routes                         | Description     |
 |-----:|--------------------------------|-----------------|
