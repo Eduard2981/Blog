@@ -18,7 +18,11 @@ If you're checking out the code from Github, make sure you've installed
 |     2| http://localhost:3000/compose  |for write article|
 |     3| http://localhost:3000/posts    |main page        |
 
- :white_check_mark: design responsive :tada:
+## Features
+
+- [x]  Design responsive :tada:
+- [x]  National and local weather :sun_behind_large_cloud:
+
 
 ## Home page
 <picture>
@@ -43,5 +47,7 @@ If you're checking out the code from Github, make sure you've installed
  <img alt="YOUR-ALT-TEXT" src="https://i.ibb.co/VNmCNw2/I-Football.png">
 </picture>
 
+## Author
+[https://github.com/Eduard2981](https://github.com/Eduard2981)
 
 ### :hash:Enjoy :wink:
