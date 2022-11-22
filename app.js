@@ -212,7 +212,7 @@ app.get("/control", function(req,res){
   });
 })
 
-
+// Error page
 app.get("*", function (req, res) {
   res.status(404);
   res.render("home", {
