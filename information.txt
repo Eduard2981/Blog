@@ -9,4 +9,6 @@ const pEls = [
   '"Nu cred că Tottenham porneşte cu şansa a doua. Meciurile de campionat au fost extrem de dificile, probabil cel mai puternic adversar cu care am jucat," a spus şi Andy Robertson.',
   '"Este a treia finală la rând pentru Liverpool, jos pălăria! Asta este cel mai dificil lucru! Noi vom juca la fel ca până acum, ei sunt favoriţi" a fost reacţia lui Pochettino înainte de meci.',
   'Traseul nu a fost unul simplu pentru niciuna dintre finaliste - Liverpool a reuşit mai întâi o victorie dramatică în faţa lui Napoli pentru a ieşi din grupe. Apoi a reuşit unul din cele mai spectaculoase comeback-uri din istorie - după 0-3 pe Camp Nou, au învins Barcelona cu 4-0 pe Anfield. '
-];
+]; 
+
+#
